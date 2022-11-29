@@ -1,0 +1,83 @@
+.swiper {
+  height: 400px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: flex-end;
+}
+.heads {
+  margin: 20px 10px;
+  width: 273px;
+  margin: auto;
+}
+
+.bubble {
+  background: var(--pink);
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: left;
+  font-size: 0.9em;
+  line-height: 20px;
+  width: 273px;
+  margin-bottom: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -25px;
+  right: 44%;
+  border: 15px solid transparent;
+  border-top-color: var(--pink);
+}
+
+.chat-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.swiper-pagination-bullet {
+  background: white;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--pink);
+  transition: 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--pink);
+}
+
+.customer-1 {
+  background-image: url('../assests/Greta.jpg');
+}
+
+.customer-2 {
+  background-image: url('../assests/Gerda.jpg');
+}
+
+.customer-3 {
+  background-image: url('../assests/Gabriele.jpg');
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-wrapper {
+    display: flex;
+  }
+
+  .swiper-pagination-bullet {
+    margin-right: 5px;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .swiper-pagination-bullet {
+    margin-right: 5px;
+  }
+}

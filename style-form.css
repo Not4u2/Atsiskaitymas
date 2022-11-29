@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Poppins:wght@400;500;700&display=swap');
+:root {
+  --background-main: white;
+  --font-main: #333;
+  --font-gray: #888;
+  --light-pink: #fff6ea;
+  --pink: hsl(313, 61%, 84%);
+  --darker-pink: #ffeeee;
+  --blue: #4267b2;
+  --orange: #e95950;
+  --red: #ff0000;
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--pink);
+  min-height: 100vh;
+  padding: 2rem;
+  max-width: 50rem;
+  margin: 0 auto;
+  background-position: center;
+}
+
+#card {
+  height: 100%;
+  background: var(--background-main);
+  border-radius: 0.75rem;
+  padding: 3rem;
+}
+
+#card h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: var(--font-main);
+}
+
+#card .input-group {
+  position: relative;
+}
+
+#card .input-group input {
+  display: block;
+  width: 100%;
+  padding: 1rem 1rem 1rem 2rem;
+  border: none;
+  border-bottom: 2px solid lightgray;
+  font-size: 1rem;
+  color: var(--font-main);
+  font-weight: 500;
+  height: 3rem;
+}
+
+#card .input-group i {
+  color: var(--font-gray);
+}
+
+#card form .input-group {
+  margin-bottom: 2rem;
+}
+
+#card .input-group:nth-last-of-type(2) {
+  margin-bottom: 0.5rem;
+}
+
+#card .input-group input:focus {
+  outline: none;
+}
+
+#card .input-group input::placeholder {
+  color: var(--font-gray);
+}
+
+#card .input-group i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  left: 0.5rem;
+}
+
+#card .input-group .line {
+  height: 0.125rem;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--font-main);
+  transition: width 300ms linear;
+}
+
+#card .input-group input:focus ~ .line {
+  width: 100%;
+}
+
+#card a {
+  text-decoration: none;
+  color: var(--font-main);
+  transition: color 300ms linear;
+  font-size: 0.875rem;
+  text-align: right;
+}
+
+#card form .link-container {
+  text-align: right;
+}
+
+#card form button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.25rem;
+  margin: 2rem 0 3rem;
+  transition: box-shadow 300ms linear;
+  background-color: var(--pink);
+}
+
+#card button:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#card .social-media {
+  text-align: center;
+  color: var(--font-main);
+  font-size: 0.875rem;
+  margin-bottom: 5rem;
+}
+
+#card .social-media ul {
+  margin-top: 2rem;
+  list-style: none;
+}
+
+#card .social-media ul li {
+  display: inline-block;
+}
+
+#card .social-media ul li:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.fa-facebook {
+  color: var(--blue);
+}
+
+.fa-instagram {
+  color: var(--orange);
+}
+
+.fa-youtube {
+  color: var(--red);
+}
+
+#card .social-media ul li a i {
+  font-size: 3rem;
+  transition: transform 200ms linear;
+}
+
+#card .social-media ul li a i:hover {
+  transform: translateY(-0.5rem);
+}
+
+#card .registration {
+  text-align: center;
+}
+
+#card .registration p {
+  margin-bottom: 0.5rem;
+}
+#card .registration a {
+  text-decoration: none;
+  color: var(--font-main);
+  transition: color 300ms linear;
+  font-size: 0.875rem;
+}

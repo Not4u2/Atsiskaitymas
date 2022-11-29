@@ -5,19 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zabee-atsiskaitymas</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./Styles/1_resets.css" />
-    <link rel="stylesheet" href="./Styles/2_variables.css" />
-    <link rel="stylesheet" href="./Styles/3_utilities.css" />
-    <link rel="stylesheet" href="./Styles/4_header.css" />
-    <link rel="stylesheet" href="./Styles/5_footer.css" />
-    <link rel="stylesheet" href="./Styles/6_home.css" />
+    <link rel="stylesheet" href="./styles/1_resets.css" />
+    <link rel="stylesheet" href="./styles/2_variables.css" />
+    <link rel="stylesheet" href="./styles/3_utilities.css" />
+    <link rel="stylesheet" href="./styles/4_header.css" />
+    <link rel="stylesheet" href="./styles/5_footer.css" />
+    <link rel="stylesheet" href="./styles/6_home.css" />
+    <link rel="stylesheet" href="./styles/7_swiper.css" />
     <link
       href="https://fonts.cdnfonts.com/css/circular-book"
       rel="stylesheet"
@@ -29,12 +23,22 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="header.js" defer></script>
+    <!-- Swiper css cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- Swiper js cdn -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
       <nav>
-        <img src="./assets/logo.png" alt="logo" />
+        <img src="./assests/logo.png" alt="logo" />
         <div class="buttons-container">
           <div class="links">
             <a href="#">Atlikti darbai</a>
@@ -44,16 +48,16 @@
             <a href="#"></a>
           </div>
           <a href="#" target="_blank">
-            <button class="demo">
+            <button class="chat">
               <i class="fa-brands fa-facebook-messenger"></i>Susisiekime
             </button>
           </a>
-          <a href="./form/index-form.html" target="_blank">
+          <a href="./form/index.html" target="_blank">
             <button class="login">
               <i class="fa-regular fa-user"></i> Prisijungti
             </button>
           </a>
-          <i class="burger fa-solid fa-bars"></i>
+          <i id="burger" class="burger fa-solid fa-bars"></i>
         </div>
       </nav>
     </header>
@@ -65,13 +69,13 @@
             <h1 class="heading-1">Mėgaukitės nagais, kurių nusipelnėte</h1>
             <p class="text-1">Prisijunkite prie mūsų!</p>
           </div>
-          <a href="./form/index-form.html" target="_blank">
+          <a href="./form/index.html" target="_blank">
             <button class="register">Registracija</button>
           </a>
           <div class="img-container">
             <img
               class="right"
-              src="./assets/randomnail2.jpg"
+              src="./assests/randomnail2.jpg"
               alt="randomnail2"
             />
           </div>
@@ -90,7 +94,11 @@
               iki 3 – 5 savaičių.
             </p>
           </div>
-          <img class="card__image" src="./assets/IMG_0020.jpg" alt="IMG_0020" />
+          <img
+            class="card__image"
+            src="./assests/IMG_0020.jpg"
+            alt="IMG_0020"
+          />
         </article>
 
         <article class="container">
@@ -107,7 +115,11 @@
               vadina korekcija be dildžiavimo.
             </p>
           </div>
-          <img class="card__image" src="./assets/IMG_1468.jpg" alt="IMG_1468" />
+          <img
+            class="card__image"
+            src="./assests/IMG_1468.jpg"
+            alt="IMG_1468"
+          />
         </article>
 
         <article class="container">
@@ -122,7 +134,11 @@
               nagų dizainas, spalva.
             </p>
           </div>
-          <img class="card__image" src="./assets/IMG_1553.jpg" alt="IMG_1553" />
+          <img
+            class="card__image"
+            src="./assests/IMG_1553.jpg"
+            alt="IMG_1553"
+          />
         </article>
 
         <article class="container">
@@ -137,7 +153,11 @@
               laiko manikiūrui.
             </p>
           </div>
-          <img class="card__image" src="./assets/IMG_1579.jpg" alt="IMG_1579" />
+          <img
+            class="card__image"
+            src="./assests/IMG_1579.jpg"
+            alt="IMG_1579"
+          />
         </article>
 
         <article class="container">
@@ -153,24 +173,53 @@
               išorinių neigiamų veiksnių.
             </p>
           </div>
-          <img class="card__image" src="./assets/IMG_0130.JPG" alt="IMG_0130" />
+          <img
+            class="card__image"
+            src="./assests/IMG_0130.JPG"
+            alt="IMG_0130"
+          />
         </article>
       </section>
 
       <section class="list">
-        <h2 class="heading-2">Atsiliepimai</h2>
-        <div class="wrapper">
-          <div class="icon-container">
-            <div class="icon customer-1"></div>
-            <p>Esu labai patenkinta, nagai padaryti tvarkingai.</p>
-          </div>
-          <div class="icon-container">
-            <div class="icon customer-2"></div>
-            <p>Labai kokybiškai atliktas darbas už patrauklią kainą.</p>
-          </div>
-          <div class="icon-container">
-            <div class="icon customer-3"></div>
-            <p>Rekomenduoju. Labai šauni meistrė.</p>
+        <div class="container">
+          <h2 class="heading-4">Atsiliepimai</h2>
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="heads">
+                  <p class="bubble">
+                    Esu labai patenkinta, nagai padaryti tvarkingai.
+                  </p>
+                  <div class="chat-container">
+                    <div class="icon customer-1"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="heads">
+                  <p class="bubble">
+                    Labai kokybiškai atliktas darbas už patrauklią kainą.
+                  </p>
+                  <div class="chat-container">
+                    <div class="icon customer-2"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="heads">
+                  <p class="bubble">Rekomenduoju. Labai šauni meistrė.</p>
+                  <div class="chat-container">
+                    <div class="icon customer-3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>

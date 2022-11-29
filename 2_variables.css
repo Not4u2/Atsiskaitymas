@@ -1,0 +1,19 @@
+:root {
+  --pink: hsl(313, 61%, 84%);
+  --light-green: rgba(0, 255, 133, 0.08);
+  --green: #b1b6ad;
+  --light-gray: #e5e5e5;
+  --white: #fff;
+  --black: #000000;
+  --light-pink: #fff6ea;
+  --darker-pink: #ffeeee;
+  --blue: #4267b2;
+  --orange: #e95950;
+  --red: #ff0000;
+
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-l: 28px;
+  --font-xl: 40px;
+  --font-xxl: 48px;
+}
